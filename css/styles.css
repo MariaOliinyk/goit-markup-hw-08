@@ -50,7 +50,7 @@ body {
 }
 
 /* site nav */
-.site-nav .link {
+.site-nav-link {
     color: var(--primary-text-color);
 
     font-weight: 500;
@@ -58,17 +58,18 @@ body {
     line-height: 1,4;
     letter-spacing: 0.02em;
 }
-.site-nav .link.current {
+.site-nav-link.current {
     color: var(--accent-color);
 }
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav-link:hover,
+.site-nav-link:focus {
     color: var(--accent-color);
 }
 
 
 /* contacts */
-.contacts a {
+.contacts-mail,
+.contacts-tel {
     color: var(--second-text-color);
 
     font-weight: 500;
@@ -76,8 +77,10 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-.contacts a:hover,
-.contacts a:focus {
+.contacts-mail:hover,
+.contacts-mail:focus, 
+.contacts-tel:hover
+.contacts-tel {
     color: var(--accent-color);
 }
 
@@ -113,7 +116,7 @@ body {
     position: absolute;
     clip: rect(0 0 0 0);
 }
-.feature-list .title {
+.feature-list-title {
     color: var(--primary-text-color);
 
     font-weight: 700;
@@ -121,21 +124,21 @@ body {
     line-height: 1.14;
     text-transform: uppercase;
 }
-.feature-list .text {
+.feature-list-text {
     color: var(--second-text-color);
 }
 
 /* work */
 
 /* team */
-.team-list .title {
+.team-list-title {
     color: var(--primary-text-color);
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.9;
 }
-.team-list .text {
+.team-list-text {
     color: var(--second-text-color);
 
     font-size: 16px;
@@ -165,26 +168,26 @@ body {
     font-size: 14px;
     line-height: 1.7;
 } 
-.footer .mail,
-.footer .phone {
+.footer-mail,
+.footer-phone {
     color: rgba(255, 255, 255, 0.6);
 
     font-size: 14px;
     line-height: 1.7;
 }
-.footer .mail:hover,
-.footer .mail:focus {
+.footer-mail:hover,
+.footer-mail:focus {
     color: var(--accent-color);
 }
 
-.footer .phone:hover,
-.footer .phone:focus {
+.footer-phone:hover,
+.footer-phone:focus {
     color: var(--accent-color);
 }
 
 /* portfolio page -> filter services section */
 
-.services .button-title {
+.services-button-title {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
@@ -192,21 +195,21 @@ body {
     align-items: center;
     text-align: center;
 }
-.services .button-title:hover {
+.services-button-title:hover {
     color: var(--white-color);
     background-color: var(--accent-background-color);
 }
-.services .button-title:focus {
+.services-button-title:focus {
     color: var(--white-color);
     background-color: var(--accent-background-color);
 }
-.services .title{
+.services-title{
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
-.services .text{
+.services-text{
     font-size: 16px;
     line-height: 1.9;
 }
