@@ -55,16 +55,13 @@ body {
     padding-bottom: 94px;
 }
 
-.section-title {
-    padding-bottom: 50px;
-}
-
 /* header */
 
 .container {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
+    padding: 0 15px;
     /* outline: 2px solid tomato; */
 }
 /* logo */
@@ -102,11 +99,16 @@ body {
 
 .site-nav {
     display: flex;
-    margin-left: -50px;
 }
+
 .site-nav-item {
     margin-left: 50px;
 }
+
+.site-nav-item:first-child {
+    margin-left: 0; 
+}
+
 .site-nav-link {
     display: block;
     color: var(--primary-text-color);
@@ -160,19 +162,15 @@ body {
 /* hero */
 .hero {
     background-color: var(--second-background-color);
-    margin-top: 0px;
-    margin-bottom: 0px;
+
     text-align: center;
     /* outline: 2px solid tomato; */
-    padding-bottom: 200px;
+    padding: 200px 0;
 }
 .hero-title {
     color: #ffffff;
 
-    padding-top: 200px;
-    padding-bottom: 0;
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
 
     font-weight: 900;
     font-size: 44px;
@@ -188,6 +186,8 @@ body {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+
+    padding-bottom: 50px;
 }
 .section-text {
     color: var(--second-text-color);
@@ -195,13 +195,12 @@ body {
 
 /* feature */
 .visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
+   visibility: collapse;
 }
 .feature-list{
     /* outline: 1px solid teal; */
     display: flex;
-    padding: o;
+    padding: 0;
     margin-left: -30px;
 }
 
@@ -233,7 +232,7 @@ body {
 .work-list{
     /* outline: 1px solid turquoise; */
     display: flex;
-    padding: o;
+    padding: 0;
     margin-left: -30px;
 }
 
@@ -243,11 +242,8 @@ body {
 }
 
 /* team */
-.section-team {
+.team {
 background-color: #F5F4FA;
-/* margin-top: 94px; */
-padding-top: 94px;
-padding-bottom: 94px;
 }
 
 .team-card {
@@ -261,7 +257,9 @@ padding-bottom: 94px;
     background-color: var(--white-color);
 }
 .team-item-content {
-    margin: 30px 60px;
+    padding: 30px 0;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-title {
@@ -271,6 +269,8 @@ padding-bottom: 94px;
     font-size: 16px;
     line-height: 1.9;
     text-align: center;
+
+    margin-bottom: 10px;
 }
 .team-list-text {
     color: var(--second-text-color);
@@ -278,7 +278,6 @@ padding-bottom: 94px;
     font-size: 16px;
     line-height: 1.19;
 
-    padding-top: 10px;
     text-align: center;
 }
 
@@ -330,25 +329,20 @@ padding-bottom: 94px;
 
 /* portfolio page -> filter services section */
 
-.container-filter{
-    width: 611px;
-    margin-left: auto;
-    margin-right: auto;
-}
 .filter {
   display: flex; 
-  margin-left: -8px;
-  margin-top: 94px;  
+  justify-content: center;
+  margin-bottom: 50px;
 }
 .filter-item {
     flex-basis: calc (100% / 5 - 8px);
     margin-left: 8px;
 }
 
-.services {
-    margin-top: 94px;
-    margin-bottom: 94px;
+.filter-item:first-child {
+    margin-left: 0;
 }
+
 .services-title{
     font-weight: 700;
     font-size: 18px;
@@ -359,7 +353,6 @@ padding-bottom: 94px;
 .services-text{
     font-size: 16px;
     line-height: 1.9;
-    margin-top: 4px;
 }
 .project{
     display: flex;
@@ -368,10 +361,10 @@ padding-bottom: 94px;
     margin: 0;
     list-style: none;
     margin-left: -30px;
+    margin-top: -30px;
 }
 .project > .project-card {
     margin-top: 30px;
-    margin-bottom: 0px;
     margin-left: 30px;
     flex-basis: calc(100% / 3 - 30px);
     border: 1px solid #EEEEEE;
@@ -381,12 +374,8 @@ padding-bottom: 94px;
 
 .card-content {
     /* outline: 1px solid red; */
-    margin: 20px 24px;
+    padding: 20px 0 20px 24px;
 }
-
-/* .card-thumb{
-    outline: 1px solid teal;
-} */
 
 /* container */
 
