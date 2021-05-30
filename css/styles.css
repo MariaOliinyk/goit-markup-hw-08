@@ -196,7 +196,9 @@ body {
 /* feature */
 .visually-hidden {
    visibility: collapse;
+   display: none;
 }
+
 .feature-list{
     /* outline: 1px solid teal; */
     display: flex;
