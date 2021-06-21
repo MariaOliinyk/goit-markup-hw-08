@@ -49,10 +49,72 @@
         <section class="hero overlay">
             <h1 class="hero-title">Эффективные решения <br /> для вашего бизнеса</h1>
             <button type="button" class="button primary" data-modal-open>Заказать услугу</button>
-<!-- modal window -->
+
+<!--modal registration form-->
+
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
-                    <p></p>
+
+                <form method="GET" class="reg-form" autocomplete="on">
+                    <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
+                    <div class="form-field">
+                        <label for="client-name" class="form-lable">Имя</label>
+                        <input 
+                            class="form-input"
+                            type="text" 
+                            name="client-name" 
+                            id="client-name" 
+                            autofocus/>
+
+                        <svg class="form-icon">
+                            <use href="./images/symbol-defs.svg#icon-name"></use>
+                        </svg>
+
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="tel" class="form-lable">Телефон</label>
+                        <input 
+                            class="form-input"
+                            type="tel" 
+                            name="tel" 
+                            id="tel"/>
+                        <svg class="form-icon icon-form-tel">
+                            <use href="./images/symbol-defs.svg#icon-form-tel"></use>
+                        </svg>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="mail" class="form-lable">Почта</label>
+                        <input 
+                            class="form-input"
+                            type="email"
+                            name="mail"
+                            id="mail"/>
+                        <svg class="form-icon icon-form-mail">
+                            <use href="./images/symbol-defs.svg#icon-form-mail"></use>
+                        </svg>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="coment" class="form-lable">Комментарий</label>
+                        <textarea 
+                            name="coment" 
+                            id="coment" 
+                            rows="10" 
+                            placeholder="Введите текст"></textarea>
+                    </div>
+                   
+                        <label class="chackbox-lable">
+                            <input class="checkbox" type="checkbox" name="mailing"/>
+                            <span class="checkbox-icon"></span>
+                            Соглашаюсь с рассылкой и принимаю
+                            <a class="licens-link" href="">Условия договора</a>
+                        </label>
+                   
+                        <button type="submit" class="button primary">Отправит</button>
+                </form>
+
                     <button class="close" data-modal-close>
                         <svg class="close-icon">
                             <use href="./images/symbol-defs.svg#icon-close-black"></use>
@@ -390,6 +452,24 @@
                 </ul>
             </div>
         </div>
+    
+        <form method="GET" class="footer-form" autocomplete="on">
+            
+            <label for="mail" class="footer-form-lable">
+                <p class="footer-form-title"> Подпишитесь на рассылку</p>
+                <input 
+                    class="footer-form-input"
+                    type="email"
+                    name="mail"
+                    placeholder="E-mail"/>
+            </label>
+
+            <button type="submit" class="button primary send">Отправит
+                <svg class="icon_send">
+                    <use href="./images/symbol-defs.svg#icon_send"></use>
+                </svg>
+            </button>
+        </form>
     </footer>
 
 <!-- script for open/close modal window  -->
