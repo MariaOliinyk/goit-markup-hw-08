@@ -1,0 +1,32 @@
+.logo {
+    color:#000000 ;
+
+    font-family: Raleway, cursive;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    
+    margin-right: 93px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--accent {
+        color: $accent-color;
+        margin: 0;
+        
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+
+    &:hover,
+    &:focus,
+    &--accent:hover,
+    &--accent:focus {
+        color: $accent-color;}
+}
+
+.footer__logo {
+    color: #ffffff;
+}

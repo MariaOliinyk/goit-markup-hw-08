@@ -1,0 +1,49 @@
+.bottom{
+    display: flex;
+    align-items: baseline;
+}
+.footer-container{
+    &:not(:last-child) {
+        margin-right: 70px;}
+}
+
+.footer-contact__title{
+    color: $white-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.footer {
+    position: relative;
+    background-color: $second-background-color;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.adress {
+    color: $white-color;
+
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+} 
+.adress__item {
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+
+    &:focus,
+    &:hover {
+        color: $accent-color;}
+}
