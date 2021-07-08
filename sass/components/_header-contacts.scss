@@ -1,14 +1,29 @@
 .contacts {
-    display: flex;
+    // display: flex;
+
+    @media screen and (max-width: 767px){
+        display: none;
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .contacts__item + .contacts__item {
-    margin-left: 50px;
+    @media screen and (min-width: 1200px){
+        margin-left: 50px;
+        text-align: center;}
 } 
 
 .contacts__mail,
 .contacts__tel {
-    display: flex;
+    // display: flex;
 
     color: $second-text-color;
     fill: $second-text-color;
@@ -18,8 +33,8 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
 
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
 
     align-items: center;
 
@@ -32,7 +47,7 @@
     color: $accent-color;
     fill: $accent-color;
 
-   }
+    }
 }
 
 .contacts__icon{

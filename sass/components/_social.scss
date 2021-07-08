@@ -5,9 +5,16 @@
 
     &--darck-bg{
         display: flex;
-        width: 206px;
+        flex-wrap: wrap;
+        justify-content: center;
         height: 44px;
+        margin: 0;
     }
+}
+
+.footer-social-container{
+    text-align: center;
+    justify-content: center;
 }
 
 .social__item{
@@ -19,12 +26,13 @@
       }
 
     &--darck-bg{
+        text-align: center;
         background-color: transparent; 
     }
     
-    &--darck-bg:nth-child(n + 2) {
-        margin-left: 10px;
-      }
+    // &--darck-bg:nth-child(n + 2) {
+    //     margin-left: 10px;
+    //   }
 }
 
 .social__link{
