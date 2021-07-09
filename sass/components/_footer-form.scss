@@ -1,24 +1,16 @@
 .footer-form{
-    position: absolute;
-    display: inline-block;
+    justify-content: center;
     text-align: center;
-    left: 15px;
-    right: 15px;
-    bottom: 60px;
 
     @media screen and (min-width: 768px) {
-        //left: 15px;
-        //right: 152px;
+
         // text-align: left;
     }
 
     @media screen and (min-width: 1200px) {
-            top: 72px;
-            right: 15px;
-            left: 600px;
+            display: inline-block;
             text-align: left;
             justify-items: left;
-            // margin-right: 20px;
         }
     }
 
@@ -44,9 +36,6 @@
     background-color: $second-background-color;
     text-align: center;
 
-    // padding: 15px 16px;
-    // margin-right: 12px;
-
     margin-bottom: 20px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -55,9 +44,7 @@
     border-radius: 4px;
 
     text-decoration-color: white;
-    position: relative;
-    left: 0px;
-    left: 0px;
+
     &::placeholder{
         font-size: 16px;
         line-height: 1.25;
@@ -73,24 +60,15 @@
     }
 
     @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     @media screen and (min-width: 1200px) {
+        display: inline-flex;
         width: 358px;
         margin-right: 12px;
+        margin-bottom: 0px;
     }
     
-}
-
-
-.footer-form__input-container{
-    display: block;
-    
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
-
-    @media screen and (min-width: 1200px) {
-        display: inline;
-    }
 }

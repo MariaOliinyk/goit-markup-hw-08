@@ -185,8 +185,15 @@ body {
 }
 
 .button--send {
-  position: relative;
-  text-align: left;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 29px;
   font-weight: 700;
   font-size: 16px;
@@ -195,11 +202,9 @@ body {
 }
 
 .button__icon--send {
-  position: absolute;
   width: 24px;
   height: 24px;
-  right: 28px;
-  top: 13px;
+  margin-left: 10px;
 }
 
 header {
@@ -743,7 +748,7 @@ textarea {
 }
 
 .hero-overlay {
-  width: 480px;
+  max-width: 480px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -763,7 +768,7 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .hero-overlay {
-    width: 768px;
+    max-width: 768px;
     height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-tablet.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
@@ -779,7 +784,7 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .hero-overlay {
-    width: 1200px;
+    max-width: 1600px;
     height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-desk.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-desk.jpg);
@@ -981,6 +986,17 @@ textarea {
 
 .team-card__item {
   background-color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.team-card__item:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .team-card__item:nth-child(3) {
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -999,31 +1015,7 @@ textarea {
         flex-basis: calc(100% / 4 - 30px);
     text-align: center;
     margin-left: 30px;
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .team-card__item:nth-child(3) {
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-card__item:nth-child(3) {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .team-card__item:nth-child(4) {
-    margin-bottom: 0px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team-card__item:nth-child(4) {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -1254,22 +1246,16 @@ textarea {
   height: 60px;
 }
 
-.bottom {
-  height: 603px;
+.footer {
+  padding: 60px 0;
+  background-color: #2F303A;
 }
 
 @media screen and (min-width: 768px) {
   .bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 463px;
   }
 }
 
@@ -1285,7 +1271,35 @@ textarea {
         -ms-flex-pack: left;
             justify-content: left;
     height: auto;
-    height: 252px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-adress-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-adress-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 93px;
   }
 }
 
@@ -1293,7 +1307,6 @@ textarea {
   display: block;
   text-align: center;
   margin-bottom: 60px;
-  padding-top: 60px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1305,6 +1318,25 @@ textarea {
 @media screen and (min-width: 1200px) {
   .footer-container {
     margin-right: 70px;
+    margin-bottom: 0px;
+  }
+}
+
+.footer-container-social {
+  display: block;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container-social {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container-social {
+    margin-bottom: 0px;
   }
 }
 
@@ -1326,11 +1358,6 @@ textarea {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-.footer {
-  position: relative;
-  background-color: #2F303A;
 }
 
 .adress {
@@ -1370,19 +1397,15 @@ textarea {
 }
 
 .footer-form {
-  position: absolute;
-  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  left: 15px;
-  right: 15px;
-  bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .footer-form {
-    top: 72px;
-    right: 15px;
-    left: 600px;
+    display: inline-block;
     text-align: left;
     justify-items: left;
   }
@@ -1417,9 +1440,6 @@ textarea {
   border-radius: 4px;
   -webkit-text-decoration-color: white;
           text-decoration-color: white;
-  position: relative;
-  left: 0px;
-  left: 0px;
 }
 
 .footer-form__input::-webkit-input-placeholder {
@@ -1458,26 +1478,24 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 768px) {
+  .footer-form__input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer-form__input {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     width: 358px;
     margin-right: 12px;
-  }
-}
-
-.footer-form__input-container {
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  .footer-form__input-container {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-form__input-container {
-    display: inline;
+    margin-bottom: 0px;
   }
 }
 

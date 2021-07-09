@@ -318,6 +318,7 @@
 
 <footer class="footer">
     <div class="container bottom">
+        <div class="footer-adress-container">
          <div class="footer-container">
              <div class="footer-container__logo">
                  <a href="" class="logo footer__logo">
@@ -326,13 +327,13 @@
                  
                  <address class="adress">
                      <ul class="list">
-                         <li><p>г. Киев, пр-т Леси Украинки, 26</p></li>
+                         <li><p class="adress-name__item">г. Киев, пр-т Леси Украинки, 26</p></li>
                          <li><a href="mailto:info@example.com" class="adress__item">info@example.com</a></li>
                          <li><a href="tel:+380991111111" class="adress__item">+38 099 111 11 11</a></li>
                      </ul>
                  </address>
          </div>
-         <div class="fotter-container">
+         <div class="footer-container-social">
              <h3 class="footer-contact__title">присоединяйтесь</h3>
              <div class="footer-social-container">
                  <ul class="social--darck-bg list">
@@ -366,30 +367,29 @@
                      </li>
                  </ul>
              </div>
-            
          </div>
-     </div>
-     
-     <form method="GET" class="footer-form" autocomplete="on">
-         
-         <label for="mail" class="footer-form__lable">
-             <p class="footer-form__title"> Подпишитесь на рассылку</p>
-         </label>
-         <div class="footer-form__input-container">
-         <input 
-         class="footer-form__input"
-         type="email"
-         name="mail"
-         placeholder="E-mail"/>
         </div>
+             
+         <form method="GET" class="footer-form" autocomplete="on">
+         
+             <label for="mail" class="footer-form__lable">
+                 <p class="footer-form__title"> Подпишитесь на рассылку</p>
+             </label>
+             <input class="footer-form__input" type="email"
+             name="mail" placeholder="E-mail" />
 
-         <button type="submit" class="button button--primary button--send">Отправит
-             <svg class="button__icon--send">
-                 <use href="./images/symbol-defs.svg#icon_send"></use>
-             </svg>
-         </button>
-     </form>
+             <button type="submit" class="button button--primary button--send">Отправить
+                 <svg class="button__icon--send">
+                     <use href="./images/symbol-defs.svg#icon_send"></use>
+                 </svg>
+             </button>
+         </form>
+     </div>
+ 
+     
+     
  </footer>
+
 
  <script
  defer
